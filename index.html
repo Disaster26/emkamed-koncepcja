@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Centrum medyczne Wrocław - ortopedia, neurologia, kardiologia | eMKaMED</title>
+<meta name="description" content="eMKaMED Centrum Medyczne, Wrocław, ul. Ślężna 169. Ortopedia i traumatologia sportowa, chirurgia artroskopowa, neurologia, kardiologia, reumatologia, USG, EKG, Holter, terapie biologiczne. Rejestracja: 71 302 75 65.">
+<meta name="theme-color" content="#164895">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-m-720.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-720.webp 720w" imagesizes="100vw" media="(max-width:900px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" imagesizes="100vw" media="(min-width:901px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/mulish-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:"Mulish";font-style:normal;font-weight:200 1000;font-display:swap;src:url(fonts/mulish-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00AE,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Mulish";font-style:normal;font-weight:200 1000;font-display:swap;src:url(fonts/mulish-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0160-0161,U+0179-017C}
+@font-face{font-family:"Mulish-fb";src:local("Arial");size-adjust:101%;ascent-override:100%;descent-override:25%;line-gap-override:0%}
+:root{--blue:#164895;--blue2:#0f3778;--navy:#0b2a5c;--red:#dd291b;--red2:#c11f13;--ink:#11203d;--mut:#4a5874;--g:#f1f4f8;--line:#d9e0ea;--hh:76px;--gut:clamp(16px,4vw,64px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 8px);-webkit-text-size-adjust:100%}
+body{font:500 1.0625rem/1.65 Mulish,"Mulish-fb",Arial,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue)}
+h1,h2,h3{font-weight:850;line-height:1.14;letter-spacing:-.015em;color:var(--ink)}
+h2{font-size:clamp(1.85rem,1.2rem + 2.1vw,3.2rem)}
+h3{font-size:1.28rem;font-weight:800}
+.w{width:min(100% - 2*var(--gut),2140px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.fig{fill:var(--red)}
+/* linia bazowa z logo + sylwetka w wyskoku */
+.baza{display:flex;align-items:flex-end;gap:0;margin:18px 0 0;width:min(260px,60%);height:30px}
+.baza::before{content:"";flex:1;height:3px;background:var(--blue);border-radius:2px;margin-bottom:0}
+.baza svg{width:26px;height:29px;flex:none;margin-left:6px;margin-bottom:2px}
+.ciemna .baza::before{background:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;background:var(--red2);color:#fff;font:850 1.04rem/1 Mulish,"Mulish-fb",Arial,sans-serif;text-decoration:none;border:0;border-radius:6px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .15s}
+.btn:hover{background:#a5190f}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.nb{background:var(--blue)}
+.btn.nb:hover{background:var(--blue2)}
+.btn:focus-visible,.menu a:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #f2b705;outline-offset:3px}
+/* naglowek */
+.top{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--hh);transition:background .2s,box-shadow .2s}
+.top.sc,.top.open{background:#fff;box-shadow:0 1px 0 var(--line),0 8px 22px rgba(15,40,90,.08)}
+.top .w{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:block;flex:none}
+.logo img{height:50px;width:auto}
+.menu{display:flex;align-items:center;gap:clamp(14px,1.5vw,34px)}
+.menu a{text-decoration:none;font-weight:800;font-size:.98rem;position:relative;padding:6px 0;color:var(--ink);white-space:nowrap}
+.menu a:not(.btn).on::after,.menu a:not(.btn):hover::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:3px;background:var(--red);border-radius:2px}
+.menu .btn{min-height:48px;padding:0 20px;color:#fff;font-size:.98rem}
+.burger{display:none}
+/* hero */
+.hero{padding:0;position:relative;min-height:max(640px,100svh);display:flex;align-items:center;background:#d6dadc;overflow:hidden}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:80% 30%}
+.hero .w{position:relative;z-index:2;padding:calc(var(--hh) + 40px) 0 72px}
+.hero .tx{max-width:min(50%,860px)}
+.hero h1{font-size:clamp(2.4rem,.9rem + 2.6vw,4.4rem);color:var(--navy);letter-spacing:-.025em}
+.hero .lead{font-size:clamp(1.1rem,.95rem + .4vw,1.4rem);margin-top:22px;max-width:40em;color:#1d2d4d}
+.hero .btn{margin-top:32px}
+.hero .info{margin-top:18px;font-weight:700;color:#2a3a5a}
+.hero .info b{color:var(--navy)}
+.hero .podpis{position:absolute;right:var(--gut);bottom:28px;z-index:2;color:#fff;font-weight:700;font-size:.92rem;text-shadow:0 1px 3px rgba(10,30,70,.55)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(255,255,255,.62) 0,rgba(255,255,255,.4) 38%,rgba(255,255,255,0) 62%)}
+.hero .linia{position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--blue);z-index:2}
+/* sekcje */
+section{padding:clamp(64px,7vw,128px) 0}
+.hero.hero{padding:0}
+.szara{background:var(--g)}
+.ciemna{background:var(--navy);color:#e9eef8}
+.ciemna h2,.ciemna h3{color:#fff}
+.glowa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 6vw;align-items:end;margin-bottom:clamp(36px,4vw,64px)}
+.glowa p{color:var(--mut);max-width:44em;font-size:1.1rem}
+.ciemna .glowa p{color:#c9d5ea}
+/* poradnie */
+.por{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px solid var(--blue)}
+.por article{padding:30px clamp(18px,2vw,40px) 34px 0;border-right:1px solid var(--line);margin-right:clamp(18px,2vw,40px)}
+.por article:last-child{border-right:0;margin-right:0}
+.por h3{font-size:clamp(1.4rem,1.1rem + .7vw,1.9rem);display:flex;align-items:flex-start;gap:10px}
+.por h3 svg{width:18px;height:20px;flex:none;margin-top:4px}
+.por ul{list-style:none;margin-top:16px}
+.por li{padding:10px 0;border-bottom:1px solid var(--line);font-weight:650}
+.por li:last-child{border-bottom:0}
+.por .kto{margin-top:14px;color:var(--mut);font-size:.96rem}
+.gab{margin-top:clamp(36px,4vw,56px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px clamp(24px,4vw,72px);padding-top:28px;border-top:1px solid var(--line)}
+.gab p{color:var(--mut)}
+.gab b{color:var(--ink)}
+/* sport */
+.sport{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,6vw,120px);align-items:start}
+.sport blockquote{font-size:clamp(1.7rem,1.1rem + 2vw,3.4rem);font-weight:800;line-height:1.22;color:#fff;letter-spacing:-.015em}
+.sport blockquote p+p{margin-top:.5em}
+.sport .cyt{margin-top:22px;color:#aebee0;font-weight:700}
+.sport .tekst p{color:#d3ddef;margin-bottom:1em}
+.sport ul{list-style:none;margin-top:8px;border-top:1px solid rgba(255,255,255,.18)}
+.sport li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18);color:#fff;font-weight:700}
+.sport li svg{width:16px;height:18px;flex:none;margin-top:5px}
+/* zespol */
+.tor{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 5*20px)/6);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;padding-bottom:4px}
+.tor::-webkit-scrollbar{display:none}
+.tor.drag{cursor:grabbing;scroll-snap-type:none}
+.tor>*{scroll-snap-align:start;min-width:0}
+.tor img{-webkit-user-drag:none;user-select:none}
+.os{margin:0}
+.os button{display:block;width:100%;padding:0;border:0;background:#dfe5ee;cursor:zoom-in;aspect-ratio:4/5;overflow:hidden;border-radius:4px}
+.os img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.os button:hover img{transform:scale(1.03)}
+.os figcaption{padding:14px 2px 0;border-top:3px solid transparent}
+.os figcaption b{display:block;font-size:1.06rem;font-weight:850;line-height:1.25}
+.os figcaption span{display:block;color:var(--mut);font-size:.93rem;margin-top:4px;line-height:1.4}
+.os.szef figcaption{border-top-color:var(--red)}
+.nawi{display:flex;gap:10px;justify-content:flex-end}
+.nawi button{width:52px;height:52px;border-radius:6px;border:2px solid var(--blue);background:#fff;color:var(--blue);cursor:pointer;display:grid;place-items:center}
+.nawi button:disabled{opacity:.3;cursor:default}
+.nawi svg{width:22px;height:22px}
+.zesp-dol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px clamp(20px,2.5vw,48px);margin-top:clamp(40px,4vw,64px);padding-top:28px;border-top:3px solid var(--blue)}
+.zesp-dol h3{font-size:1rem;font-weight:850;color:var(--blue);margin-bottom:8px}
+.zesp-dol p{font-size:.98rem;color:var(--ink);line-height:1.55}
+/* godziny */
+.godz{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:clamp(32px,5vw,110px);align-items:start}
+.klin{border-top:3px solid var(--blue);padding-top:24px}
+.klin dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin-top:14px;font-size:1.2rem}
+.klin dt{font-weight:700;color:var(--mut)}
+.klin dd{font-weight:850}
+.klin .nag{margin-top:28px;padding:18px 20px;background:var(--g);border-radius:6px}
+.klin .nag a{font-weight:850;font-size:1.25rem;text-decoration:none;color:var(--red2);display:inline-block;margin-top:2px}
+.tab-w{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:560px}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);font-size:1rem}
+thead th{font-size:.9rem;font-weight:850;color:var(--mut);border-bottom:3px solid var(--blue)}
+td:not(:first-child),th:not(:first-child){text-align:center;width:9%}
+td:first-child{font-weight:750}
+td svg{width:15px;height:17px;display:inline-block;vertical-align:-3px}
+tr.gr td{background:var(--g);font-weight:850;color:var(--blue);font-size:.92rem;padding-top:14px}
+td small{display:block;font-size:.8rem;color:var(--mut);font-weight:700}
+/* terapie */
+.ter{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,110px)}
+.krew{margin:0 calc(-1*var(--gut)) clamp(28px,3vw,48px) 0}
+.ter .opis p{margin-bottom:1em;color:#24334f}
+.kroki{list-style:none;counter-reset:k;margin-top:8px}
+.kroki li{position:relative;padding:14px 0 14px 46px;border-bottom:1px solid var(--line)}
+.kroki li::before{counter-increment:k;content:counter(k);position:absolute;left:0;top:12px;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-weight:850;font-size:.95rem;display:grid;place-items:center}
+.dwie{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:28px}
+.dwie h3{font-size:1.1rem;margin-bottom:8px}
+.dwie ul{list-style:none}
+.dwie li{padding:7px 0 7px 26px;position:relative;font-size:.99rem}
+.dwie li::before{content:"";position:absolute;left:2px;top:15px;width:12px;height:3px;background:var(--red);border-radius:2px}
+.schemat{margin-top:28px;display:flex;gap:20px;align-items:center}
+.schemat button{border:1px solid var(--line);background:#fff;padding:8px;border-radius:6px;cursor:zoom-in;flex:none}
+.schemat img{width:140px;height:auto}
+.schemat p{color:var(--mut);font-size:.95rem}
+/* dla pacjenta */
+.pac{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,64px)}
+.pac article{border-top:3px solid var(--blue);padding-top:24px}
+.pac h3{margin-bottom:12px}
+.pac ul{list-style:none}
+.pac li{padding:9px 0;border-bottom:1px solid var(--line);font-size:.99rem}
+.pac p{font-size:.99rem;color:#24334f;margin-bottom:.8em}
+/* dotacje */
+.dot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,80px)}
+.dot article{border-top:3px solid var(--blue);padding-top:24px}
+.dot h3{font-size:1.2rem;line-height:1.35;margin-bottom:12px}
+.dot p{color:#24334f;font-size:.99rem;margin-bottom:.8em}
+.dot dl{display:grid;grid-template-columns:auto auto;justify-content:start;gap:6px 24px;margin-top:14px}
+.dot dt{color:var(--mut);font-weight:700}
+.dot dd{font-weight:850}
+.dot .logos{margin-top:22px;background:#fff;border:1px solid var(--line);padding:10px;border-radius:4px}
+/* aktualnosci */
+.akt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,56px)}
+.akt article{border-top:3px solid var(--blue);padding-top:20px}
+.akt time{display:block;font-weight:850;color:var(--red2);font-size:.95rem;margin-bottom:8px}
+.akt p{font-size:1rem;color:#24334f}
+/* kontakt */
+.kon{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(32px,5vw,100px);align-items:start}
+.dane{display:grid;gap:0;margin-top:8px;border-top:3px solid var(--blue)}
+.dane div{padding:16px 0;border-bottom:1px solid var(--line)}
+.dane span{display:block;color:var(--mut);font-weight:700;font-size:.92rem}
+.dane a,.dane b{font-weight:850;font-size:1.25rem;text-decoration:none;color:var(--ink)}
+.dane a.cz{color:var(--red2)}
+form{margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+form h3{grid-column:1/-1}
+label{display:grid;gap:6px;font-weight:750;font-size:.95rem}
+label.pel{grid-column:1/-1}
+input,select,textarea{font:inherit;font-weight:600;padding:13px 14px;border:1.5px solid #b9c4d6;border-radius:6px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(22,72,149,.18)}
+[aria-invalid=true]{border-color:var(--red)}
+.zg{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:.9rem;color:var(--mut)}
+.zg input{width:20px;height:20px;flex:none;margin-top:2px}
+form .btn{grid-column:1/-1;justify-self:start}
+#msg{grid-column:1/-1;padding:14px 16px;background:#e7f0e8;border-radius:6px;font-weight:700}
+.mapa{position:relative;aspect-ratio:4/3;background:#e3e8ef;border-radius:6px;overflow:hidden}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapa p{position:absolute;inset:auto 0 0 0;padding:14px 16px;color:var(--mut);font-size:.9rem}
+/* stopka */
+footer{background:#0a2350;color:#c5d1e6;padding:56px 0 26px;font-size:.96rem}
+.st{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:28px}
+.st img{height:46px;width:auto}
+.st h3{color:#fff;font-size:1rem;margin-bottom:10px}
+.st a{color:#fff;text-decoration:none}
+.st a:hover{text-decoration:underline}
+.st ul{list-style:none}
+.st li{padding:3px 0}
+.st-d{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);font-size:.875rem;align-items:center}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+/* mobilny pasek */
+.mob{display:none}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,20,45,.95);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 12px 20px}
+.lb.otw{display:flex}
+.lb img{max-width:min(96vw,1100px);max-height:80vh;width:auto;height:auto;object-fit:contain}
+.lb p{color:#e8eef6;margin-top:14px;text-align:center;font-size:.95rem}
+.lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;width:52px;height:52px;display:grid;place-items:center}
+.lb button svg{width:28px;height:28px}
+.lb .x{top:6px;right:8px}
+.lb .p{left:6px;top:50%;transform:translateY(-50%)}
+.lb .n{right:6px;top:50%;transform:translateY(-50%)}
+@media (max-width:1500px){
+  .tor{grid-auto-columns:calc((100% - 4*20px)/5)}
+  .zesp-dol{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .menu{gap:clamp(12px,1.2vw,22px)}
+  .menu a{font-size:.93rem}
+}
+@media (max-width:1240px){
+  :root{--hh:68px}
+  .logo img{height:44px}
+  .burger{display:inline-grid;place-items:center;width:48px;height:48px;border:2px solid var(--blue);border-radius:6px;background:#fff;cursor:pointer;padding:0}
+  .burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:var(--blue);position:relative;transition:.2s}
+  .burger span::before,.burger span::after{content:"";position:absolute;left:0}
+  .burger span::before{top:-6px}
+  .burger span::after{top:6px}
+  .top.open .burger span{background:transparent}
+  .top.open .burger span::before{top:0;transform:rotate(45deg)}
+  .top.open .burger span::after{top:0;transform:rotate(-45deg)}
+  .menu{position:fixed;inset:var(--hh) 0 auto 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:4px var(--gut) 22px;border-top:1px solid var(--line);box-shadow:0 18px 30px rgba(15,40,90,.14);transform:translateY(-8px);opacity:0;visibility:hidden;transition:.2s;max-height:calc(100svh - var(--hh));overflow:auto}
+  .top.open .menu{transform:none;opacity:1;visibility:visible}
+  .menu a{padding:14px 2px;border-bottom:1px solid var(--g);font-size:1.08rem}
+  .menu a::after{display:none!important}
+  .menu a.on{box-shadow:inset 4px 0 0 var(--red);padding-left:14px}
+  .menu .btn{margin-top:16px;min-height:54px;border:0}
+  .tor{grid-auto-columns:calc((100% - 3*20px)/4)}
+  .por{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .por article:nth-child(2){border-right:0;margin-right:0}
+  .por article:nth-child(n+3){border-top:1px solid var(--line)}
+  .pac{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .st{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .hero{align-items:flex-end;min-height:100svh;background:var(--navy)}
+  .hero::before{display:none}
+  .hero picture{bottom:auto;height:auto}
+  .hero picture img{position:static;height:auto;aspect-ratio:3/4;object-fit:cover}
+  .hero::after{content:"";position:absolute;left:0;right:0;top:0;height:calc(133.34vw + 2px);background:linear-gradient(180deg,rgba(11,42,92,0) 52%,rgba(11,42,92,.75) 74%,#0b2a5c 100%);z-index:1}
+  .hero .w{padding:calc(100vw * 1.0) 0 26px}
+  .hero .nm{display:none}
+  .hero .tx{max-width:none}
+  .hero h1{color:#fff;font-size:clamp(1.7rem,1rem + 3.2vw,2.6rem)}
+  .hero .lead{color:#dfe7f5;font-size:1rem;margin-top:12px;line-height:1.55}
+  .hero .btn{margin-top:24px;width:100%}
+  .hero .info{color:#c9d6ec;margin-top:12px;font-size:.95rem}
+  .hero .info b{color:#fff}
+  .hero .podpis{display:none}
+  .glowa{grid-template-columns:1fr}
+  .sport,.godz,.ter,.kon,.dot{grid-template-columns:1fr}
+  .gab{grid-template-columns:1fr}
+  .tor{grid-auto-columns:calc((100% - 2*16px)/2.4);gap:16px}
+  .nawi{display:none}
+  .akt{grid-template-columns:1fr}
+  .krew{margin:0 calc(-1*var(--gut)) 28px}
+  .mob{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr;background:var(--red2);transform:translateY(110%);transition:transform .25s;padding-bottom:env(safe-area-inset-bottom)}
+  .mob a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;font-weight:850;text-decoration:none;color:#fff;font-size:1.05rem}
+  .mob svg{width:20px;height:20px}
+  .mob.widac{transform:none}
+  footer{padding-bottom:86px}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .por{grid-template-columns:1fr}
+  .por article{border-right:0;margin-right:0;padding-right:0}
+  .por article+article{border-top:1px solid var(--line)}
+  .tor{grid-auto-columns:calc((100% - 14px)/1.6);gap:14px}
+  .zesp-dol{grid-template-columns:1fr 1fr}
+  .pac{grid-template-columns:1fr}
+  .dwie{grid-template-columns:1fr;gap:18px}
+  table{min-width:0;table-layout:fixed}
+  th,td{padding:10px 2px;font-size:.88rem}
+  td:not(:first-child),th:not(:first-child){width:30px}
+  thead th:first-child{width:auto}
+  td:first-child{padding-left:0}
+  td small{font-size:.68rem;white-space:nowrap}
+  form{grid-template-columns:1fr}
+  .st{gap:24px 18px}
+  .st>div:first-child{grid-column:1/-1}
+}
+@media (max-width:900px) and (max-height:760px){
+  .hero picture,.hero::after{top:-12vw}
+  .hero .w{padding-top:calc(100vw * .76)}
+}
+@media (min-width:1800px){html{font-size:112.5%}}
+@media (min-width:2300px){html{font-size:125%}:root{--gut:5vw}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="fig" viewBox="0 0 50 56"><circle cx="18" cy="7.6" r="5.4"/><path d="M1.5 19.6C9 17.6 16 17.2 21.6 20.6 26.4 13.2 35 7.6 48.6 5.4 38.6 10.4 30.6 17.6 27.6 27.4 26.2 36.4 27.6 45 25.4 54.4 23.8 43 19.8 32.2 1.5 19.6Z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M7 3h3l1.5 5-2 1.3a11 11 0 0 0 5.2 5.2l1.3-2 5 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 5 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/></symbol>
+  <symbol id="i-l" viewBox="0 0 24 24"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-p" viewBox="0 0 24 24"><path d="m9 4 8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="w">
+    <a class="logo" href="#start" aria-label="eMKaMED Centrum Medyczne - strona główna"><img src="img/logo.webp" width="250" height="98" alt="eMKaMED Centrum Medyczne"></a>
+    <nav class="menu" aria-label="Menu główne">
+      <a href="#poradnie">Poradnie</a>
+      <a href="#zespol">Zespół</a>
+      <a href="#godziny">Godziny przyjęć</a>
+      <a href="#terapie">Terapie biologiczne</a>
+      <a href="#pacjent">Dla pacjenta</a>
+      <a href="#dotacje">Dotacje UE</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn" href="tel:+48713027565"><svg aria-hidden="true"><use href="#i-tel"/></svg>71 302 75 65</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="top" aria-label="Otwórz menu"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="start" aria-labelledby="h1">
+  <picture>
+    <source media="(max-width:900px)" srcset="img/hero-m-480.webp 480w, img/hero-m-720.webp 720w" sizes="100vw" width="720" height="960">
+    <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" sizes="100vw" width="1600" height="800" alt="dr n. med. Maciej Kentel, założyciel i szef kliniki eMKaMED" fetchpriority="high">
+  </picture>
+  <div class="w">
+    <div class="tx">
+      <h1 id="h1">Centrum medyczne we Wrocławiu - od diagnozy do powrotu do sprawności</h1>
+      <p class="lead">Prywatny ośrodek specjalistyczny założony przez dr n. med. Macieja Kentla<span class="nm">. Ortopedia i traumatologia sportowa, neurologia, kardiologia i reumatologia</span> przy ul. Ślężnej 169.</p>
+      <a class="btn" href="tel:+48713027565"><svg aria-hidden="true"><use href="#i-tel"/></svg>Umów wizytę: 71 302 75 65</a>
+      <p class="info">Rejestracja: <b>pon.-czw. 8-20, pt. 8-19</b></p>
+    </div>
+  </div>
+  <p class="podpis">dr n. med. Maciej Kentel, szef kliniki</p>
+  <span class="linia" aria-hidden="true"></span>
+</section>
+
+<section id="poradnie" aria-labelledby="h-por">
+  <div class="w">
+    <div class="glowa">
+      <div>
+        <h2 id="h-por">Poradnie specjalistyczne</h2>
+        <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      </div>
+      <p>Leczenie dobieramy indywidualnie, na podstawie wnikliwej konsultacji i zleconych badań. W trudnych przypadkach organizujemy wielodyscyplinarne konsylia lekarskie.</p>
+    </div>
+    <div class="por">
+      <article>
+        <h3><svg class="fig" aria-hidden="true"><use href="#fig"/></svg>Ortopedia</h3>
+        <ul><li>Chirurgia</li><li>Konsultacja chirurgiczna</li><li>USG diagnostyczne</li></ul>
+        <p class="kto">Chirurgia artroskopowa, traumatologia sportowa, chirurgia ręki i stopy, ortopedia dziecięca.</p>
+      </article>
+      <article>
+        <h3><svg class="fig" aria-hidden="true"><use href="#fig"/></svg>Neurologia</h3>
+        <ul><li>Konsultacja neurologiczna</li><li>USG diagnostyczne</li></ul>
+        <p class="kto">lek. Joanna Janczarska, środa 15:30-18:00.</p>
+      </article>
+      <article>
+        <h3><svg class="fig" aria-hidden="true"><use href="#fig"/></svg>Kardiologia</h3>
+        <ul><li>Konsultacja kardiologiczna</li><li>Badanie EKG serca</li><li>Badanie aparatem Holtera</li></ul>
+      </article>
+      <article>
+        <h3><svg class="fig" aria-hidden="true"><use href="#fig"/></svg>Reumatologia</h3>
+        <ul><li>Konsultacja reumatologiczna</li><li>Ultrasonografia dopplerowska</li><li>USG diagnostyczne</li></ul>
+      </article>
+    </div>
+    <div class="gab">
+      <p><b>Gabinet zabiegowy.</b> Zmiany opatrunków, iniekcje do- i okołostawowe, zakładanie i zdejmowanie opatrunków gipsowych. W ramach konsultacji wykonujemy badanie USG.</p>
+      <p><b>Medycyna molekularna.</b> Terapia preparatami osocza bogatopłytkowego (PRP), komórkami macierzystymi i terapia Orthokine® z własnej krwi pacjenta.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ciemna" id="sport" aria-labelledby="h-sport">
+  <div class="w sport">
+    <div>
+      <h2 id="h-sport" class="sr">Ortopedia i traumatologia sportowa</h2>
+      <blockquote>
+        <p>Sami uprawiamy sport. Rozumiemy specyfikę leczenia ludzi aktywnych.</p>
+      </blockquote>
+      <p class="cyt">Zespół eMKaMED</p>
+      <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+    </div>
+    <div class="tekst">
+      <p>Profil naszej placówki to przede wszystkim ortopedia i traumatologia sportowa. Specjalizujemy się w chirurgii artroskopowej i małoinwazyjnych zabiegach. Taki zabieg to krótszy pobyt w klinice, mniej bólu, szybsza rehabilitacja i powrót do sprawności.</p>
+      <p>Przeprowadzamy też zabiegi ortopedyczne w technice otwartej, z użyciem sprzętu wiodących światowych firm medycznych. Opiekujemy się pacjentem od przygotowania do zabiegu, przez pobyt w klinice, po okres pooperacyjny.</p>
+      <ul>
+        <li><svg class="fig" aria-hidden="true"><use href="#fig"/></svg>Wieloletnie doświadczenie w pracy ze sportowcami, m.in. z kadrą narodową koszykówki i judo</li>
+        <li><svg class="fig" aria-hidden="true"><use href="#fig"/></svg>Lekarze są uczestnikami i wykładowcami kongresów krajowych i zagranicznych</li>
+        <li><svg class="fig" aria-hidden="true"><use href="#fig"/></svg>Współpraca z ośrodkami ortopedycznymi w Polsce, Europie i USA</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="szara" id="zespol" aria-labelledby="h-zesp">
+  <div class="w">
+    <div class="glowa">
+      <div>
+        <h2 id="h-zesp">Nasz zespół</h2>
+        <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      </div>
+      <div>
+        <p>Lekarze chirurgii artroskopowej i traumatologii sportowej, chirurgii ręki i stopy oraz ortopedii dziecięcej. Stale podnoszą kwalifikacje na krajowych i międzynarodowych zjazdach i sympozjach.</p>
+        <div class="nawi" data-nav="tor-z" style="margin-top:22px"><button type="button" data-k="-1" aria-label="Poprzedni lekarze"><svg aria-hidden="true"><use href="#i-l"/></svg></button><button type="button" data-k="1" aria-label="Następni lekarze"><svg aria-hidden="true"><use href="#i-p"/></svg></button></div>
+      </div>
+    </div>
+    <div class="tor" id="tor-z" data-tor data-grupa aria-label="Lekarze kliniki">
+      <figure class="os szef"><button type="button" data-lb="img/t-kentel-720.webp"><img src="img/t-kentel-360.webp" width="360" height="450" alt="dr n. med. Maciej Kentel" loading="lazy"></button><figcaption><b>dr n. med. Maciej Kentel</b><span>szef kliniki, kierownik zespołu chirurgii artroskopowej</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-krupa-720.webp"><img src="img/t-krupa-360.webp" width="360" height="450" alt="dr n. med. Sebastian Krupa" loading="lazy"></button><figcaption><b>dr n. med. Sebastian Krupa</b><span>zastępca kierownika zespołu chirurgii artroskopowej</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-reichert-720.webp"><img src="img/t-reichert-360.webp" width="360" height="450" alt="dr hab. Paweł Reichert" loading="lazy"></button><figcaption><b>dr hab. Paweł Reichert, prof. nadzw. UMW</b><span>chirurgia ręki</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-szymanski-720.webp"><img src="img/t-szymanski-360.webp" width="360" height="450" alt="dr n. med. Marcin Szymański" loading="lazy"></button><figcaption><b>dr n. med. Marcin Szymański</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-wnukiewicz-720.webp"><img src="img/t-wnukiewicz-360.webp" width="360" height="450" alt="dr n. med. Witold Wnukiewicz" loading="lazy"></button><figcaption><b>dr n. med. Witold Wnukiewicz</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-barnas-720.webp"><img src="img/t-barnas-360.webp" width="360" height="450" alt="dr n. med. Michał Barnaś" loading="lazy"></button><figcaption><b>dr n. med. Michał Barnaś</b><span>ortopeda dziecięcy</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-mstarzyk-720.webp"><img src="img/t-mstarzyk-360.webp" width="360" height="450" alt="lek. Maciej Starzyk" loading="lazy"></button><figcaption><b>lek. Maciej Starzyk</b><span>chirurgia stopy</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-strynowicz-720.webp"><img src="img/t-strynowicz-360.webp" width="360" height="450" alt="lek. Łukasz Strynowicz" loading="lazy"></button><figcaption><b>lek. Łukasz Strynowicz</b><span>chirurgia stopy</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-madej-720.webp"><img src="img/t-madej-360.webp" width="360" height="450" alt="lek. Jakub Madej" loading="lazy"></button><figcaption><b>lek. Jakub Madej</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-korolczuk-720.webp"><img src="img/t-korolczuk-360.webp" width="360" height="450" alt="lek. Krzysztof Korolczuk" loading="lazy"></button><figcaption><b>lek. Krzysztof Korolczuk</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-jarowicz-720.webp"><img src="img/t-jarowicz-360.webp" width="360" height="450" alt="lek. Tomasz Jarowicz" loading="lazy"></button><figcaption><b>lek. Tomasz Jarowicz</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-aldobasic-720.webp"><img src="img/t-aldobasic-360.webp" width="360" height="450" alt="lek. Silvester Aldobašić" loading="lazy"></button><figcaption><b>lek. Silvester Aldobašić</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-staykov-720.webp"><img src="img/t-staykov-360.webp" width="360" height="450" alt="lek. Robert Staykov" loading="lazy"></button><figcaption><b>lek. Robert Staykov</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+      <figure class="os"><button type="button" data-lb="img/t-kstarzyk-720.webp"><img src="img/t-kstarzyk-360.webp" width="360" height="450" alt="lek. Kajetan Starzyk" loading="lazy"></button><figcaption><b>lek. Kajetan Starzyk</b><span>chirurgia artroskopowa i traumatologia sportowa</span></figcaption></figure>
+    </div>
+    <div class="zesp-dol">
+      <div><h3>Anestezjologia</h3><p>lek. Wiesław Wargocki</p></div>
+      <div><h3>Chirurgia naczyniowa</h3><p>dr hab. n. med. Artur Milnerowicz</p></div>
+      <div><h3>Chirurgia ogólna</h3><p>lek. Adam Paszkowski</p></div>
+      <div><h3>Neurologia</h3><p>lek. Joanna Janczarska</p></div>
+      <div><h3>Rehabilitacja</h3><p>mgr Monika Kentel, mgr Magdalena Ładyga, mgr Bartosz Lubarski, mgr Dawid Grul, mgr Aleksander Kowalski</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="godziny" aria-labelledby="h-godz">
+  <div class="w">
+    <div class="glowa">
+      <div>
+        <h2 id="h-godz">Godziny przyjęć</h2>
+        <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      </div>
+      <p>Dni przyjęć lekarzy. Godzinę wizyty ustala rejestracja: 71 302 75 65.</p>
+    </div>
+    <div class="godz">
+      <div class="klin">
+        <h3>Klinika</h3>
+        <dl><dt>pon.-czw.</dt><dd>8:00-20:00</dd><dt>piątek</dt><dd>8:00-19:00</dd></dl>
+        <div class="nag"><span>Przypadki nagłe</span><br><a href="tel:+48601732903">601 732 903</a></div>
+      </div>
+      <div class="tab-w">
+        <table>
+          <caption class="sr">Dni przyjęć lekarzy</caption>
+          <thead><tr><th scope="col">Lekarz</th><th scope="col"><abbr title="poniedziałek">pn</abbr></th><th scope="col"><abbr title="wtorek">wt</abbr></th><th scope="col"><abbr title="środa">śr</abbr></th><th scope="col"><abbr title="czwartek">cz</abbr></th><th scope="col"><abbr title="piątek">pt</abbr></th></tr></thead>
+          <tbody>
+            <tr class="gr"><td colspan="6">Ortopedia</td></tr>
+            <tr><td>dr n. med. Maciej Kentel</td><td></td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td></tr>
+            <tr><td>dr n. med. Sebastian Krupa</td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td></tr>
+            <tr><td>lek. Maciej Starzyk</td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td></td><td></td></tr>
+            <tr><td>dr n. med. Marcin Szymański</td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td></tr>
+            <tr><td>lek. Jakub Madej</td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td></td></tr>
+            <tr><td>dr n. med. Witold Wnukiewicz</td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td></tr>
+            <tr><td>prof. Paweł Reichert</td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td></tr>
+            <tr><td>lek. Tomasz Jarowicz</td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td></tr>
+            <tr><td>lek. Krzysztof Korolczuk</td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td></tr>
+            <tr><td>lek. Silvester Aldobašić</td><td></td><td></td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td></tr>
+            <tr><td>lek. Kajetan Starzyk</td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td></tr>
+            <tr><td>lek. Robert Staykov</td><td></td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td></tr>
+            <tr><td>lek. Łukasz Strynowicz</td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td></td></tr>
+            <tr class="gr"><td colspan="6">Ortopedia dziecięca</td></tr>
+            <tr><td>dr n. med. Michał Barnaś</td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg></td></tr>
+            <tr class="gr"><td colspan="6">Neurologia</td></tr>
+            <tr><td>lek. Joanna Janczarska</td><td></td><td></td><td><svg class="fig" role="img" aria-label="przyjmuje"><use href="#fig"/></svg><small>15:30-18:00</small></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="szara" id="terapie" aria-labelledby="h-ter">
+  <div class="w">
+    <div class="glowa">
+      <div>
+        <h2 id="h-ter">Terapie biologiczne</h2>
+        <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      </div>
+      <p>Terapia Orthokine® to leczenie, w którym do chorego stawu podaje się białka przeciwzapalne i czynniki wzrostu uzyskane z krwi pacjenta. Stąd określenie autoterapia: preparat nie zawiera substancji obcych dla organizmu.</p>
+    </div>
+    <div class="ter">
+      <div class="opis">
+        <img class="krew" src="img/krwinki-1000.webp" srcset="img/krwinki-600.webp 600w, img/krwinki-1000.webp 1000w" sizes="(max-width:900px) 100vw, 50vw" width="1000" height="495" alt="Krwinki - terapia z własnej krwi pacjenta" loading="lazy" style="mix-blend-mode:multiply">
+        <h3>Jak przebiega leczenie</h3>
+        <ol class="kroki">
+          <li>Z żyły pacjenta pobiera się krew do specjalistycznej strzykawki EOT®II.</li>
+          <li>W cieplarce laboratoryjnej, w kontrolowanych warunkach, przez ok. 6-9 godzin komórki krwi wytwarzają białka hamujące stan zapalny, m.in. IL-1Ra.</li>
+          <li>Z jednego pobrania powstaje 4-6 porcji kondycjonowanej surowicy, przechowywanych w zamrożeniu (-20°C).</li>
+          <li>Pierwsze wstrzyknięcie może być wykonane jeszcze tego samego dnia. O częstotliwości podań decyduje lekarz specjalista.</li>
+        </ol>
+      </div>
+      <div>
+        <div class="dwie">
+          <div>
+            <h3>Zalety terapii</h3>
+            <ul><li>nie wymaga znieczulenia ogólnego ani operacji</li><li>znikome ryzyko infekcji</li><li>łagodzi dolegliwości bólowe</li><li>zapobiega stanowi zapalnemu</li><li>opóźnia niszczenie chrząstki i ją zabezpiecza</li><li>terapię można powtarzać</li></ul>
+          </div>
+          <div>
+            <h3>Wskazania</h3>
+            <ul><li>bóle stawów, choroba zwyrodnieniowa (np. kolana, biodra)</li><li>stan po operacji stawu kolanowego, np. rekonstrukcji więzadła krzyżowego</li><li>bóle kręgosłupa, np. odcinka lędźwiowego</li><li>urazy u sportowców: stawy, mięśnie, ścięgna</li></ul>
+          </div>
+        </div>
+        <div class="schemat" data-grupa>
+          <button type="button" data-lb="img/schemat-orthokine.webp"><img src="img/schemat-orthokine.webp" width="431" height="471" alt="Schemat terapii Orthokine" loading="lazy"></button>
+          <p>Schemat terapii Orthokine® krok po kroku. Kliknij, aby powiększyć.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pacjent" aria-labelledby="h-pac">
+  <div class="w">
+    <div class="glowa">
+      <div>
+        <h2 id="h-pac">Dla pacjenta</h2>
+        <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      </div>
+      <p>Staramy się, aby kontakt z pacjentem obejmował przygotowanie do zabiegu, pobyt w klinice i okres pooperacyjny.</p>
+    </div>
+    <div class="pac">
+      <article>
+        <h3>Przyjęcie na zabieg</h3>
+        <ul>
+          <li>wydrukowane wyniki badań krwi: APTT i podstawowa morfologia</li>
+          <li>płyty lub klisze z badań obrazowych (RTG, MR, TK) z opisem</li>
+          <li>orteza, jeśli została zatwierdzona przez lekarza</li>
+          <li>kule łokciowe przy zabiegach na kończynach dolnych</li>
+          <li>leki przyjmowane na stałe i rozpiska ich dawek</li>
+          <li>na zabieg zgłaszamy się na czczo, bez wody i gumy do żucia</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Płatność za zabieg</h3>
+        <p>Gotówką lub kartą podczas przyjęcia na oddział albo przelewem, najpóźniej dobę przed zabiegiem.</p>
+        <h3 style="margin-top:26px">Skargi i wnioski</h3>
+        <p>Przyjmuje dyrektor zarządzający w poniedziałki w godz. 12-13, w formie pisemnej lub ustnej, na miejscu w ośrodku.</p>
+      </article>
+      <article>
+        <h3>Dokumentacja medyczna</h3>
+        <p>Wydajemy na wniosek pacjenta, jego przedstawiciela ustawowego lub osoby upoważnionej. Wniosek można złożyć w rejestracji, wysłać pocztą albo skan na pacjent@emkamed.com.pl.</p>
+        <p>Dokumentację przygotowujemy do 14 dni roboczych. Odbiór w dni powszednie w godz. 8:00-16:00, po telefonie od pracownika, lub wysyłka pocztą.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="szara" id="dotacje" aria-labelledby="h-dot">
+  <div class="w">
+    <div class="glowa">
+      <div>
+        <h2 id="h-dot">Dotacje UE</h2>
+        <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      </div>
+      <p>Prywatny Gabinet Urazowo-Ortopedyczny Maciej Kentel (Centrum Medyczne eMKaMED) rozwija nowe metody leczenia stawów dzięki Funduszom Europejskim.</p>
+    </div>
+    <div class="dot">
+      <article>
+        <h3>Opracowanie innowacyjnych metod rekonstrukcji stawów ramiennego i kolanowego z zastosowaniem materiału ortobiologicznego oraz innowacyjnych metod fizjoterapii</h3>
+        <p>Badania kliniczne nad rekonstrukcją więzadła ACL stawu kolanowego i stożka rotatorów stawu ramiennego w technice artroskopowej, z ortobiologią i komórkami macierzystymi. Cel: krótszy powrót pacjentów do sprawności. Projekt nr FENG.01.01-IP.02-0916/24, realizacja od 01.11.2025.</p>
+        <dl><dt>Wartość projektu</dt><dd>11 500 551,00 zł</dd><dt>Wkład Funduszy Europejskich</dt><dd>7 461 225,00 zł</dd></dl>
+        <img class="logos" src="img/eu-fe.webp" width="1400" height="389" alt="Fundusze Europejskie dla Nowoczesnej Gospodarki, Rzeczpospolita Polska, Dofinansowane przez Unię Europejską" loading="lazy">
+      </article>
+      <article>
+        <h3>Wdrożenie nowych metod leczenia uszkodzeń elementów chrzęstnych i chrzęstno-włóknistych stawów w technice artroskopowej, w tym z wykorzystaniem terapii komórkami macierzystymi</h3>
+        <p>Projekt zrealizowany w ramach Regionalnego Programu Operacyjnego dla Województwa Dolnośląskiego na lata 2014-2020.</p>
+        <dl><dt>Wartość projektu ogółem</dt><dd>436 631,22 zł</dd><dt>Koszty kwalifikowane</dt><dd>345 743,19 zł</dd><dt>Dofinansowanie z UE</dt><dd>155 584,45 zł</dd></dl>
+        <img class="logos" src="img/eu-rpo.webp" width="1386" height="231" alt="Fundusze Europejskie, Dolny Śląsk, Unia Europejska" loading="lazy">
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="aktualnosci" aria-labelledby="h-akt">
+  <div class="w">
+    <div class="glowa">
+      <div>
+        <h2 id="h-akt">Aktualności</h2>
+        <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      </div>
+    </div>
+    <div class="akt">
+      <article><time datetime="2025-10-13">13.10.2025</time><p>Od 01.11.2025 rozpoczynamy realizację projektu „Opracowanie innowacyjnych metod rekonstrukcji stawu ramiennego i stawu kolanowego z zastosowaniem materiału ortobiologicznego oraz innowacyjnych metod fizjoterapii”.</p></article>
+      <article><time datetime="2025-04-24">24.04.2025</time><p>PARP poinformowała nas, że nasz projekt nr FENG.01.01-IP.02-0916/24 został wybrany do dofinansowania. Cieszymy się niezmiernie i zabieramy się do pracy.</p></article>
+      <article><time datetime="2024-03-12">12.03.2024</time><p>Do zespołu dołączył dr n. med. Michał Barnaś, specjalista ortopedii i traumatologii narządu ruchu dzieci i dorosłych, kształcony m.in. w Bochum, Rothenburgu i Görlitz.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="szara" id="kontakt" aria-labelledby="h-kon">
+  <div class="w kon">
+    <div>
+      <h2 id="h-kon">Kontakt</h2>
+      <div class="baza" aria-hidden="true"><svg class="fig"><use href="#fig"/></svg></div>
+      <div class="dane" style="margin-top:28px">
+        <div><span>Adres kliniki</span><b>ul. Ślężna 169, 53-110 Wrocław</b></div>
+        <div><span>Rejestracja</span><a href="tel:+48713027565">71 302 75 65</a></div>
+        <div><span>Przypadki nagłe</span><a class="cz" href="tel:+48601732903">601 732 903</a></div>
+        <div><span>E-mail</span><a href="mailto:pacjent@emkamed.com.pl">pacjent@emkamed.com.pl</a></div>
+      </div>
+      <form id="form" novalidate>
+        <h3>Prośba o kontakt z rejestracji</h3>
+        <label>Imię i nazwisko<input name="n" autocomplete="name" required></label>
+        <label>Telefon<input name="t" type="tel" autocomplete="tel" required></label>
+        <label class="pel">Poradnia<select name="p"><option>Ortopedia</option><option>Neurologia</option><option>Kardiologia</option><option>Reumatologia</option><option>Terapie biologiczne</option></select></label>
+        <label class="pel">Wiadomość (opcjonalnie)<textarea name="w"></textarea></label>
+        <label class="zg"><input type="checkbox" required>Zgadzam się na kontakt telefoniczny w sprawie wizyty.</label>
+        <button class="btn nb" type="submit">Wyślij prośbę</button>
+        <p id="msg" hidden>Dziękujemy, rejestracja oddzwoni. (W podglądzie formularz niczego nie wysyła.)</p>
+      </form>
+    </div>
+    <div class="mapa" id="mapa" data-src="https://maps.google.com/maps?q=%C5%9Al%C4%99%C5%BCna%20169%2C%2053-110%20Wroc%C5%82aw&amp;z=15&amp;output=embed" data-t="Mapa dojazdu: ul. Ślężna 169, Wrocław"><p>Mapa: ul. Ślężna 169, Wrocław</p></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <div class="st">
+      <div>
+        <img src="img/logo-biale.webp" width="250" height="98" alt="eMKaMED Centrum Medyczne" loading="lazy">
+        <p style="margin-top:14px">Prywatny ośrodek specjalistyczny założony przez dr n. med. Macieja Kentla.</p>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <ul><li>ul. Ślężna 169, 53-110 Wrocław</li><li><a href="tel:+48713027565">71 302 75 65</a></li><li><a href="mailto:pacjent@emkamed.com.pl">pacjent@emkamed.com.pl</a></li><li><a href="https://www.facebook.com/emkamedcentrummedyczne/" rel="noopener">Facebook</a></li></ul>
+      </div>
+      <div>
+        <h3>Klinika</h3>
+        <ul><li><a href="#poradnie">Poradnie</a></li><li><a href="#zespol">Zespół</a></li><li><a href="#godziny">Godziny przyjęć</a></li><li><a href="#aktualnosci">Aktualności</a></li></ul>
+      </div>
+      <div>
+        <h3>Pacjent</h3>
+        <ul><li><a href="#terapie">Terapie biologiczne</a></li><li><a href="#pacjent">Dla pacjenta</a></li><li><a href="#dotacje">Dotacje UE</a></li><li><a href="#kontakt">Kontakt</a></li></ul>
+      </div>
+    </div>
+    <div class="st-d"><span>© <span id="rok">2026</span> eMKaMED Centrum Medyczne</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=emkamed.com.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+</div>
+  </div>
+</footer>
+
+<nav class="mob" id="mob" aria-label="Szybki kontakt"><a href="tel:+48713027565"><svg aria-hidden="true"><use href="#i-tel"/></svg>Zadzwoń: 71 302 75 65</a></nav>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.4"/></svg></button>
+  <button class="p" type="button" aria-label="Poprzednie"><svg aria-hidden="true"><use href="#i-l"/></svg></button>
+  <img alt="">
+  <button class="n" type="button" aria-label="Następne"><svg aria-hidden="true"><use href="#i-p"/></svg></button>
+  <p></p>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
